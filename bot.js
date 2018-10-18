@@ -62,7 +62,7 @@ client.on("message", message => {
       channel.sendEmbed(embed);
     });
    client.on('message', message => {
-	var prefix = "*";
+	var prefix = "#";
     if (message.content.startsWith(prefix + 'امسح')) {
       if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`ماعندك صلاحيات :<`).catch(console.error);
   message.delete()
