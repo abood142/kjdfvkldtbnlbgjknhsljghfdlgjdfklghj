@@ -15,7 +15,7 @@ client.on('ready', () => {
  
  
  client.on('message', message => {
-if (message.content.split(' ')[0] == '*bc')
+if (message.content.split(' ')[0] == '$bc')
  message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 member.send( `${member} ! ` + "**" + " : ** " + message.content.substr(3));
@@ -42,7 +42,7 @@ client.on("message", message => {
                           }
 });
    client.on('message', message => {
-	var prefix = "*";
+	var prefix = "$";
     if (message.content.startsWith(prefix + 'امسح')) {
       if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`ماعندك صلاحيات :<`).catch(console.error);
   message.delete()
